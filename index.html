@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet"> 
+    <title>Invoice Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top_container">
+            <h1>Invoice creator</h1>
+            <p>Thanks for choosing GoodCorp, LLC!</p>
+        </div>
+        <div class="bottom_container">
+            <div class="input_container">
+                <label for="task_text">Product / Service:</label>
+                <input type="text" class="form_control" id="taskText">
+                <label for="task_amount" class="task_amount_label">Amount:</label>
+                <input type="text" class="form_control task_amount" id="taskAmount">
+                <button id="addTask" class="btn">Add task</button>
+                <p class="err_msg"></p>
+            </div>
+            <div class="heading_container">
+                <h3>Task</h3>
+                <h3>Total</h3>
+            </div>
+            <div id="task_container">
+            </div>
+            <button id="delete_all_btn" class="delete_all_btn">Delete All</button>
+            <hr>
+            <div class="heading_container">
+                <h3>Notes</h3>
+                <h3>Total amount</h3>  
+            </div>
+            <p class="total_amount" id="totalAmount">$0</p>
+            <button class="send_btn">Send invoice</button>
+        </div>
+    </div>
+    <script src="./js/uuidv4.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
