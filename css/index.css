@@ -55,11 +55,12 @@ input {
 }
 .task_card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     background-color: rgb(240, 248, 255);
     color: rgb(31, 41, 55);
-    margin-bottom: .5rem;
+    margin-bottom: .5rem; 
+    border: 1px solid purple;
+    position: relative;
 }
 .task_text {
     padding: .5rem;
@@ -112,11 +113,41 @@ input {
 .remove_item {
     text-decoration: none;
     align-self: flex-end;
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
     padding: .5rem;
-    color: rgb(245, 245, 245);
+    display: grid;
+    place-items: center;
+    /* border: 1px solid purple; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    cursor: pointer;
 }
-.send_btn{
+.edit_btn {
+    background-color: orange;
+}
+.hidden {
+    display: none;
+}
+.edit_item {
+    text-decoration: none;
+    align-self: flex-end;
+    /* background-color: rgb(253, 217, 14); */
+    padding: .5rem;
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+    /* border: 1px solid purple; */
+    position: absolute;
+    top: 0;
+    right: 2.1rem;
+    bottom: 0;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.pdf_btn{
     width:100%;
     background-color: rgb(58, 105, 210);
     color: rgb(245, 245, 245);
@@ -127,3 +158,7 @@ input {
     border: none;
     margin: 2rem 0;
 }
+ion-icon {
+    color: rgb(44, 44, 44);
+    font-size: 1.2rem;
+  }
